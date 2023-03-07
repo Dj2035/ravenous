@@ -2,7 +2,7 @@ import React from "react";
 import "./SearchBar.css";
 
 //The search bar should allow users to businesses by the following keys
-let sortByOptions = {
+const sortByOptions = {
   "Best Match": "best_match",
   "Highest Rated": "rating",
   "Most Reviewed": "review_count"
@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
 
   renderSortByOptions() {
     return Object.keys(sortByOptions).map(sortByOption => {
-      let sortByOptionValue = sortByOptions[sortByOption];
+      const sortByOptionValue = sortByOptions[sortByOption];
       return <li key={sortByOptionValue}>{sortByOption}</li>;
     });
   }
